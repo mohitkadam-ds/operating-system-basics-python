@@ -1,0 +1,20 @@
+import os
+root = r"C:\Users\Mohit\Desktop\B.Sc. Data Science\OS Prg update program code"
+structure = {
+    "Teaching": ["teacher1.txt", "teacher2.txt"],
+    "NonTeaching": ["staff1.txt", "staff2.txt"],
+    "Students": ["student1.txt", "student2.txt"]
+}
+
+for folder, files in structure.items():
+    fpath = os.path.join(root, folder)
+    os.makedirs(fpath, exist_ok=True)
+
+    print("Folder:", folder)
+    for file in files:
+        file_path = os.path.join(fpath, file)
+        if not os.path.exists(file_path):
+            open(file_path, "w").close()
+            print("File created:", file)
+        else:
+            print("File exists:", file)
