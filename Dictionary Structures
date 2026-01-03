@@ -1,0 +1,29 @@
+# Single-Level Directory
+single_level = ["file1.txt", "file2.txt", "file3.txt"]
+print("Single-Level Directory:")
+for f in single_level:
+    print("-", f)
+
+# Two-Level Directory
+two_level = {
+    "User1": ["u1_file1.txt", "u1_file2.txt"],
+    "User2": ["u2_file1.txt", "u2_file2.txt"]
+}
+
+print("\nTwo-Level Directory:")
+for user, files in two_level.items():
+    print(user, ":", files)
+
+# Hierarchical Directory
+hierarchical = {
+    "root": {
+        "files": ["root_file.txt"],
+        "Documents": ["doc1.pdf", "doc2.pdf"],
+        "Music": ["song1.mp3", "song2.mp3"]
+    }
+}
+
+print("\nHierarchical Directory:")
+print("Root Files:", hierarchical["root"]["files"])
+print("Documents:", hierarchical["root"]["Documents"])
+print("Music:", hierarchical["root"]["Music"])
