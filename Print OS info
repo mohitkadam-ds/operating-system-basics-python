@@ -1,0 +1,3 @@
+import platform
+print("Operating System:", platform.system())
+print("Version:", platform.version())
