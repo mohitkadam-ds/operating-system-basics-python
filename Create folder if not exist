@@ -1,0 +1,9 @@
+import os
+path = r"C:\Users\Swami\Documents"
+folder_name = "test_Demo folder5"
+full_path = os.path.join(path, folder_name)
+if not os.path.exists(full_path):
+    os.mkdir(full_path)
+    print("Folder created at:", full_path)
+else:
+    print("Folder already exists:", full_path)
